@@ -1,0 +1,25 @@
+{% extends "base_files/base.html" %} 
+{% load static %} 
+{% block meta %}{%endblock meta %} 
+{% block title %}index{% endblock title %} 
+
+{% block style %}
+<style>
+   #a{
+    background-image: url("https://images.unsplash.com/photo-1524069290683-0457abfe42c3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNjaG9vbCUyMGdyb3VwfGVufDB8fDB8fHww");
+    background-repeat: no-repeat;
+    background-size: 100% 500px;
+  }
+</style>
+{% endblock style %}
+
+ {% block content %} 
+
+ {% include 'indexnav.html' %}
+<div id="a"
+  class="container-fluid bg-white"
+  style="height: 500px; display: flex; justify-content: center"
+>
+</div>
+{% include 'footer.html' %}
+{% endblock content %}

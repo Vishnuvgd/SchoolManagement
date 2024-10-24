@@ -1,0 +1,31 @@
+{% extends 'base_files/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Edit Students</h2>
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" value={{a.first_name}} name="first_name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" value={{a.last_name}}  name="last_name">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" value={{a.address}}  name="address" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" value={{a.email}} name="email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" value={{a.phone}}  name="phone">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Add</button>
+    </form>
+</div>
+{% endblock %}

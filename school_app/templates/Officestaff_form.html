@@ -1,0 +1,29 @@
+{% extends 'base_files/base.html' %}
+
+{% block content %}
+{% include 'Navbar.html' %}
+<div class="container mt-5">
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Add Staff</h2>
+        <hr>
+        <div class="form-group">
+            <label for="first_name">Name</label>
+            <input type="text" class="form-control"  name="name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Email</label>
+            <input type="email" class="form-control"  name="email">
+        </div>
+        <div class="form-group">
+            <label for="address">Desigination</label>
+            <input type="text" class="form-control"  name="desigination">
+        </div>
+        <div class="form-group">
+            <label for="phone">Subject</label>
+            <input type="tel" class="form-control"  name="subject">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Add</button>
+    </form>
+</div>
+{% endblock %}

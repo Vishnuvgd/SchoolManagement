@@ -1,0 +1,39 @@
+{% extends "base_files/base.html" %} 
+{% load static %} 
+{% block meta %}{%endblock meta %} 
+{% block title %}OfficeView{% endblock title %} 
+
+{% block style %}
+<style>
+  p{
+    font-size: small;
+  }
+</style>
+{% endblock style %}
+
+ {% block content %} 
+ {% include 'Navbar.html' %}
+<div class="container row px-5 mt-3" style="margin-left: 8%; padding-top: 50px">
+<h5>Office Staff</h5>
+<hr>
+  {% for i in staff %}
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    <div class="card my-2" style="width:15rem;">
+    <img
+        src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg"
+        height="100px"
+        width="85px;"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}}</h5>
+        <p>{{i.desigination}}</p>
+        <p class="card-text">{{i.subject}}</p>
+        <p class="card-text">{{i.email}}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %} 

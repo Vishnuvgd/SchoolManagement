@@ -1,0 +1,33 @@
+{% extends 'base_files/base.html' %}
+
+{% block content %}
+{% include 'Navbar.html' %}
+  <div class="container mt-5">
+    <h2>Payment list</h2>
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Student_Name</th>
+          <th>Amount</th>
+          <th>Payment_Date</th>
+          <th>Status</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in fee %}
+          <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.student }}</td>
+            <td>{{ i.amount }}</td>
+            <td>{{ i.payment_date }}</td>
+            <td>{{ i.status }}</td>
+            {% comment %} <td><a href="http://127.0.0.1:8000/studentedit/{{student.id}}" class="btn btn-warning" style="border-radius:20px; width:60px;"><i class="fa-sharp fa-regular fa-pen-to-square"></i></a></td> {% endcomment %}
+            <td><a href="http://127.0.0.1:8000/studentdel/{{student.id}}" class="btn btn-info" style="border-radius:20px; width:60px;"><i class="fa-solid fa-trash"></i></a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

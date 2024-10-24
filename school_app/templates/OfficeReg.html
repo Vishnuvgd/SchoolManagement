@@ -1,0 +1,94 @@
+{% extends "base_files/base.html" %}
+
+{% load static %}
+
+{% block meta %}{% endblock meta %}
+
+{% block title %}OfficeReg{% endblock title %}
+
+{% block style %}
+
+{% endblock style %}
+
+{% block content %}
+<section class="" style="background-color: #eee;">
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-12 col-xl-11 p-5">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Office Reg</p>
+  
+                  <form method="post" class="mx-1 mx-md-4">
+                    {% csrf_token %}
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example1c">Name</label>
+                        <input type="text" name="name" id="form3Example1c" class="form-control" />
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example3c">Desigination</label>
+                        <input type="text" name="desigination" id="form3Example3c" class="form-control" />
+   
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example4c">Subject</label>
+                        <input type="text" name="subject" id="form3Example4c" class="form-control" />
+                        
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example4cd">Email</label>
+                        <input type="email" name="email" class="form-control" />
+                        
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example4cd">Password</label>
+                        <input type="password" name="password" class="form-control" />
+                        
+                      </div>
+                    </div>
+  
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                      <label class="form-check-label" for="form2Example3">
+                        have an account ?<a href="http://127.0.0.1:8000/officelog/">Login</a>
+                      </label>
+                    </div>
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Register</button>
+                    </div>
+  
+                  </form>
+  
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSEhMVFhUSFxUVFxUWFxYVFxIVFxUWFhUWFRYYHSggGB0lHxYXITEhJSouLi8uFx8zODMsNygtLisBCgoKDg0OGxAQGyslICUtLS0tLS0tNy0rKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstLS0tLTgtLf/AABEIALwBDAMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABgIDBAUHAf/EAEYQAAIBAgMDBwgGCAUFAQAAAAECAAMRBBIhBRMxFiJBUVST0QYVMlJhcZGiFCOBkrHhM0JVcqHT4vAHNLLB0kNTYnOCJP/EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EAC4RAAICAgAFAwIFBQEAAAAAAAABAhEDEhMUIVFSBDGRQaEiMkJhcWKBscHwBf/aAAwDAQACEQMRAD8A7jERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREttWUdMUQ2kXImOcT1CUHEn2S2rK7oy4mJ9IMfSDGjHERlxMUYk9UrXEjpjVkqaL8SlXB4GVSpYREQBERAEREAREQBERAEREAREQBERAEREAREQBES3Vqge+ErIborJtLFTE9Xxlh3J4ymaKHcyeRv2KmcniZTES5mIiVhh1fxgkoiXd6OGUfGDUHqj4yLfYml3LUT0meSSol1K5HtlqIaslOjNp1gZcmul6lXI48Jm4djSOTuZcTxTfhPZQ1EREAREQBERAEREAREQBERAEREAREs4irbQcfwkpWQ3R5XrW0HH8JixE1Sowcm2JrW8oMICQcTRBGhG8TQjiOM2QnKfLzyRahkq4ValQVGcVFtnZWPOUgKBzfSHw65TJKUVaNcEITdSdHQ+UOE7VQ7xPGOUOE7VQ7xPGcO83Yvs1Xu3nnm7F9mq928w5iXY7OTxeTO5cocJ2qh3ieMcocJ2qh3ieM4b5vxfZqvdvHm7F9mq928cxLsOTxeTO5cocJ2qh3ieMcocJ2qh3ieM4b5vxfZqvdvHm7F9mq928cxLsOTxeTO5cocJ2qh3ieMcocJ2qh3ieM4b5uxfZqvdvHm7F9mq928cxLsOTxeTO5cocJ2qh3ieMcocJ2qh3ieM4b5uxfZqvdvK6OycY7Kgw9QFiFBNNwASbXJ6B7Y48uxHJ4vJnesHj6VYE0qiVAtgcjBrX4XtwmRNP5N+TtPBKy02di+UsWI4qCOaABYanrm4E6o3XU4JqKl+H2K6dQiZiOCLiYFpXSqWMiUbEZUZ0TxWvqJ7MjcREQBERAEREAREQBERAEREAoqvYTDPtkb/xAweLq01qYSq6tRzk01cpvVOXpBAuMugPWft5vn2v14jvv64eTTo0WjhWVWpHbQF9sqOT2ziIba/XiO+/rjPtfrxHff1yvHRflP6kdtbL0XlBQHiL+8Tiufa/XiO+/rko/w7bH/Sm+lGru9y1s9TOM+enbTMdbZtZDzJqgvTava0dC3K+qvwEpqU1AJyjQE6AX010l2eVCbG2psbDhc9AvMy5Gtg7beuhq1MMqUjR36OhzgqCQabkqAKgtewlOyNuPUR2qYZFthxiaZUllZGDWRiVFmFhwvxmF5PUqrNiFShUoU6tC7UnBVExbZg4o5hqpGpI04S5sGvXfDNQNGoiUcGtPn02R2xARlZUv6a2C8B0yps4rqZ+y9tCq6K1FVD4RMWSNbFmsUAtr75Z8n9vmu6rUoIgq0PpNMqc53ebLlcFRZtQdNJrvJfYzUqqkUnQVNnoHLB7b9nGZSW9FtPR0t1R5IYWrvKQalUT6Pgjh3NRSgNXeA2Qn0xYE3GkBxj1o2Pk/t44ioqvh6aLWomvSKtmOQPktUGUWOoOl5tPJ7GDE4enXNNVNQE5RYgWZl429kjfkdhqu9oh6NVPo2Eeg5dCoNQ1QQEJ9MWF7jSbLyDrsMNTw70a1N6SsSalNkU3qMQFZuJ1GkIicV1r/AL3JHuV9VfgI3S+qPgJXMHbpf6NX3V95uqmTKbHPkOWx6De0sZe/QzFNpUKx/sTie+2x14nvv655vtsdeJ77+ubPOuxmvSNfqR23fH+xPGqE8ZxPfbY68T339cb7bHXie+/rkcePYco/JHbsPUsbdBmZOI7Kw22K9QUzVr0wfSqNVJCDpNg12PUPw4zs+EbmgE3IAFzxPtMspbdaKShw3rdl+IiCBERAEREAREQBERAEtYl7D3y7MPENc+7SWirZSbpFoi8p+iU/UX7olQmDtOooqUw9QoClU2FRqWYhqVrlWF7An4yMsdmkThlrFszPotP1E+6I+i0/UT7omoFZcp+tO734XNvn4bgNbeZr2zdF+MNWW1fJVJAo3J3zvkN31BLHKbdItwmXDNuIbZ8HTOmRfsAH8RIztXaL4Ji1Oi1c3y5VJBCkZsxsp6gOHTNrRqU97TFOqWuzArvnqXG7c6qXPSB0S6iA4l7gHm9OvQspkhqzTHO+pFuX2I/ZtX7z/wAqOX2I/ZtX7z/ypM8TkQZigOoFgouSTYcZRRqIzZd3lNs3OVdQCAeBPWJGsqsvxMftr9yH8vsR+zav3n/lRy+xH7Nq/ef+VJjiHRSF3eYkE81V0AIGtyOsSrDFHBsgGU5SCq3BsD0XHAiNZe5PEx3Wv3IZy/xH7Nq/ef8AlRy+xH7Nq/ef+VJc9ZAzKKRbKbEhUtewbpI6CJforTZQ4VbMAw5o4EXEOMkQsmPx+5CuX2I/ZtX7z/yo5fYj9m1fvP8AypK6eLpkKd0Qr5QGKpbnkBem+pI6Jk4gIi5igOqiwUXJZgo/iRGskFkxv9P3IXy+xH7Nq/ef+VKqfltXqEUzs+qgqEIXLPZA2hY/VDhe/GS2jVRmCGmVJBYZlXUKVB4E+svxlzF0VCPZV9FugdRkOLRKnB+0TC2TgVK52F73sDqAB7JsPolP1E+6JrcwGGUliozoCwYpYGsoPOBBHVx6ZaesoL7qqW+orMfrnqZWGTKdWOU6nUS8YXGzGU6lRt/olP1E+6I+iU/UT7omsSrT3lIU6xYlyCN+75huqhN1LkW0B4dEx6tenkY75t4C+m/e+YOQFCZ7fZaX4XWinF6WbxaCrqqqD7ABLlJrG8PKJri/KYZn+M2MS3Qa492kuSrLp2hERBIiIgCIiAIiIB4xsLzT7RxyUUNSobKCBwubk24TaYg80zn3lVtbeucOo5tJrsfWcaWHsFz7yJTNmWLG5fX6GGaVE1U3mLjiRURsrEBKgOVS1iWpEA24eifhNV5J4tmUo73tlyA8cuoI9trD4yRysc6yRjOJrgW0WahQ2r5HA3wa2U5su4CXy8eM8qBnFUqjj6rKLqQWa7mwB49Hxm5iTxH7G3DVmsDl6lOyOMrMxLKVFt268T7SJ7R/zL/u/wDGbK01tH/Mv+7/ALLKzls7LwjqqL21Ccgy2vnS19B6Q6hLGGL74Zwo+ra2Uk/rpe9wPZMzF4fOuXMy6ghly3BBv+sCP4S1hsDkbOajubZefuwALgm2RF6hxl1JaNFHF7plnGlt6uUKeY18xI/WThYGV7Lv9ZmAB3nAEkfo6fSQJdxWDzsGFR0IBHN3ZuCQdc6N1dEqweG3YIzMxY5izZbk2A/VUDgB0SHJaUFF7WYOapnq5QhGccWYf9KnxspmVsz9BS/9af6BKauzyWZhWqLnNyqiiQDlC6ZqZP6o6ZlUKIRFQcFUKL8bAWF5MpJpCMWm2aSkam6o3CWvhtQzE+nT4DLNntW+70tfPStfQfpU42lmnsqwQGtVZUKEKRRschBUErTB6B0zMxdDeLlzFdVOZctwVYMLZgRxHSJMpptMiMGotGBQL79MwUfVVrZSTfn0ONwJnY39G/7rfgZaw+ByvnNWo5CsozbsABipPoIvqCXcZ+jf91vwMpklbtFscaVMwKQP0dbAmzobAXNhVBNh06CUVgzl8qOPqKy85St2bJlAvx9EzN2R+iX7fxMzIjJqNEygnKzV5y1SlZH0cklkKgDd1BxPtIH2zHqlt21Pd1CxLgcw21Y214dPGbyJbiO7KcNFLzDr49EqJSY8+rmyi3qi5ueiZVZwouTYDUznOLxtTeiszZnpkMpPCw1y2HRxmWT1SwxS+r/x9Tm9Q6kdNwrakTJmk2BtNa9NaoFrkqV9VhoRfp6/tm7nS5KVSXsy2N2hERINBERAEREAREQDC2tiVpUzUf0UBY/Z1e2cnrYkF3qkW3jO3sF2JCzonl1WC4R7/rWUe8sJzSrlNFhx5jXH2EzzfXzuUYHLl6zo32x3u1K/G9MkdVyNCeuS7ajU97TFS1slWwbhfNR8T8ZA9h81qOvFqdz1kkXJnQscGFRGVGcBainKUBBLUit8zD1Twj/z6Tf8muLrGSRrlenlOo3e/A48230cG3uzfxh3p2r7srYUbnKdBq+vvmQtOpq+7YHfZ8l6ebLuRTv6WXj7YqJUcVTumW9LKoY07s12NhlcjpHG3Gek2qf8mqTtfwUUWpb2luytyzXC8Su7fj7L2l+mbYlyehP9lnql2qUzunUKzMSxp+o6j0XJ4sJaf9NV/wDWfwWZ5WnLoa4k1F2ZtPaFM2ALc4gAlHAJPDUraV4jEqlgxN2vYBWYm1r6KD1j4zWCqxFIFCOdS1upA1HQDMrHuRVp2UtzKvAgfrUesyzxpSSKqb1sysPiFe+UnmmxuGUg2BsQwB4EH7ZHTVrG7ZsVY1GUZDhAv6UooUNzrcOOs3OymJNa6lfrBoSD/wBGl1TAo1TlC7t7b70+bl/zH717fZLQitmis5PVMskVgQC2N5xsOdguNi34AxUNUEDNjbsbDnYLjYn8AZsMdXAakNdXP+hl/FxKcdUymmQpY5zotr/o6nWQJrouxls+57siswWqarVLU241d2WVd2jG+60tqT1zMp45GIUZrtoLo63IBNrsoF7A/CaxahNHFkqy6Po1r/5dOokS+9VjVpXQj6xtSVI/RVdNDMHBO/2NlNqkZ1fFqhAYm51ACs2nXzQbS3Vrq9Jyp0AYG4IINuBBFxLOMciqLKW5h4EC3OHWRKKDE06xIscz6GxtzF6pVxWll1L8VFolfoy5vRzpf3b5RLFR6YNTdEf5esTkPAjJlJ9vGZVFWOHXKpYh1Nha5Aqgm2YgcAemU1adSpm+qZfqayDMafOZ8lgMrH1Txkwa0KzT3LaPR3lEUyty59E6kbqoT9mglis9HdubrvLvrfnZs7WtM+9Rnp/VVFCuWLMaVgN3UX9VyeLDolmotTI1MUXJJcBr0stixsfTvax6r+ya3G/7GdOiryq/Qj98f6WkBxlbnkcQVBFv1rlhb36f30Tjyza1AW/7i/6XnPcgFcn/AML+4lucftsP7Jnh+pS4rf7GWet3fYmHkLj1XNhzowY1FPWCFBHvFh/Yk8nK/JWsFxidOcMvuOW/+38Z1MT0fRz2xK/p0IwPoexETpNxERAEREAREQDE2jRVxlZQym9wQCD9hkN8p/Jehua1VM1MpSqtlW2UlUY8CNOHRJH5R7bp4bIGDMWuQFtwHEm59sjG2PKdK2HrUlRwatKpTBOWwLoVBNjw1mOXJg/LOrRhKt+pn+TOwaVNKVa7OzU0YZiCFzKDcADj7Zm7R8pKFE2JLG9rKLm+txbrGl/fIqfKWtToUKVFEJp0lp1DUzi5VVUGmabAjg3t4SKbQo4irUapnpqWy+jnBUKuWytxF+J67DqmLzYEkoNIbSinpR17Zm16VcA02uSL26bdfu4i/sle0Np06IvUa3SB0nUDT439wPVOVbDxGJwxYruWzZNDvFAKAi/NIJve511PvMubcx2JxWXOKAytmsN4wbmlbEMTYWJ0FhK8xj8jVZpafSzoWz/KihVOUEqf/IWvrlNr+3T7CeAmQq3xFQdaW+IWcjwWFxFN0fOjFGzAtnJOhGUnjbnE26zeSLD+UmMRswTD8Muu+OmnSWv0Rx8fkThzOnxKJ5TwFXmBqqFUKmy0mUnLw5xqm3wl/GYZ2ZWR1UqGXnIXBDFDwDrY8z+Mg3LLHephfhV/5SpfLDFm4ZKAuCAU3lwevUmX5uF3sX2xpVZN8DRKZ87qzO2a4XIBzFW1izer19M0jbYoKmQ16SstY3U1EBFsQSbgnSQis7OxZiSzG5JOpPwlNj/Z/KXh6vEnexSUoNVZPq+28NenbE0NHN/raeg3dQdftHxiptnDFqf/AOmhoxv9bT0+rca6+0SAWP8AZ/KLH+z+Uvz2LuUqHc6RhKlOumIFOohVyUDqQ4F6CKeB1tfrmRTwtQujPUpsEJay02W5KMvpGo3rdU5eVP8AZ/KbLZO2a2HuEsQb81iStzbXS2ukyfqsfWpe5op4+ls6Fi8M7MGR1WwKnMhe+oItZ1t/GUCgyUqmZgxbOxIUqNVtYAserrkK5ZY31ML8Kv8AylNXyvxrAqUw2oI4Ven/AOpV+px1WxdTx3dkwwuPp0aKmo1r5re2xJNuuwmPgfKzD1Gy3K6A3YWBuLgg9IOgHWSJz7aeNxNdAjbkWZW03hzZSSFIYkW11tb8ZrMPg8QjK2dCVZGGbObZTcKt+CnTQeqOqU4+PyMMmae34ao7e1UBcx4AXvrwmixHldh1fLcnhzgCVAJtckdHC1uNxIi3lHiygTLQsOnNXv8AbdrEezhIumzq4tz6dhxFmy1LG93Xg3QPcq9UnmMfkTkyz6aUdnrCliaRW+ZTobHVW9h6xIdyXpHHGialSwwy1L3W+tZlt6PDSa7yc2zXwwp02FN0Xmsb1M5W5OguFvrxImyXbqjHNisrZDh1oZdM2YVTUzcbWsbS3E9NJLar/wBFJNN3L3olmz9j0aNt3TUEfrEXb2846zfiQpfLGlfWnUt/8+MmdNwwDDgwBHuOonTDJikqx/QYvqVRES5sIiIAiIgCa7yh2wmEw74hwSEGijizE2VR1XJGs2Miv+JuBets+oEBYoUqEDiVVrtb3C5+yEDlm3PLXE4ogvu1Ck5QqDmg9GY3J6PhNcm0sQdRcjrCA/gJrRM/A7axNFclGvVprcnKjlRc8TYe6JYcbduKKUmXfOGJ6m7v8o84Ynqbu/ylfKnG9rr943jHKnG9rr943jI4GPxXwRqijzhiepu7/KW32tXGhNj1FQPxEv8AKnG9rr943jMDG46rWbPVqNUawGZyWNhewuejU/GOXxeK+Bqi/wCea3rD7q+E9TatcmwNz7FB/ATXzIwGPq0Gz0aj02IylkJUlSQSLjouB8I5fF4r4GqMzzhiepu7/KPOGJ6m7v8AKV8qcb2uv3jeMcqcb2uv3jeMcvj8V8DVFH0/E9Td3+UpfaeIGpuPegH4iXeVON7XX7xvGY2P2ziK6ha1epUUHMFdiwDWIuAemxPxkcvj8V8DVHvnit6w+6vhA2xW9YfdHhMCVU3KkMpIKkMCOIINwR7QZPL4vFfA1RsvOGJ6m7v8o+n4nqbu/wApXypxva6/eN4xypxva6/eN4xy+PxXwNUUecMT1N3f5Qdo4nqPd/lK+VON7XX7xvGU1fKXGMCrYquVYEEGoxBBFiCLyOXx+K+Bqiz55resPur4R55resPur4TAiTy+LxXwNV2Nmu0sSdRcjrCXH4T3zhiepu7/AClOG8oMXTUJTxNZUUWCq7AKOoAGXeVGN7XX7xvGOXxeK+Bqijzhiepu7/KPOGJ6m7v8pXyoxva6/eN4xyoxva6/eN4xy+PxXwNUWfPFYHUi46Co+BFp0TyC/wAQKlasuGxITn6U6iDLzgLhWUaagaEW6B0zl2IrtUYu7FmY3ZmNyx6yTN75AYJ6uPoBBfduKrHoVU1JPvNh7yJaOOEfyqiUq9jv8REguIiIAiIgCIiAaPE+R+BqMXbC0szakgZbnrIWwlrkPs/stP5vGSGJNgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeMch9n9lp/N4yQxIsEe5D7P7LT+bxjkPs/stP5vGSGJNgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeMch9n9lp/N4yQxFgj3IfZ/ZafzeM2mzNlUMMpWhSSmDqcoAzH2niftmbEgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAf//Z"
+                   style="margin-left:5%;width:400px;"  alt="Sample image">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}

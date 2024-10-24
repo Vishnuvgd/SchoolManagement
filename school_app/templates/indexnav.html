@@ -1,0 +1,55 @@
+{% extends "base_files/base.html" %}
+
+{% load static %}
+
+{% block meta %}{% endblock meta %}
+
+{% block title %}Adminnav{% endblock title %}
+
+{% block style %}
+<style>
+    #navbar-brand{
+        box-shadow: 0px 2px 2px rgb(127, 127, 127);
+    }
+    nav{
+        height:70px;
+        box-shadow: 0px 2px 2px rgb(209, 209, 209);
+    }
+
+</style>   
+{% endblock style %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid">
+       <b class="navbar-brand text-black" style="margin-left:2%;">school</b>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/index/">Home</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link text-black" id="s" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" id="y" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex" style="padding-right:20px;">
+            <ol class="nav-item dropdown mt-5" style="text-decoration:none;">
+              <a class="nav-link dropdown-toggle text-uppercase text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Login
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/adminlog/">School Admin</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/officelog/">Office Staff</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/librarylog/">Library</a></li>
+              </ol>
+        </form>
+      </div>
+    </div>
+  </nav>
+  {% endblock content %}

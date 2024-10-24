@@ -1,0 +1,42 @@
+{% extends "base_files/base.html" %} 
+{% load static %} 
+{% block meta %}{%endblock meta %} 
+{% block title %}OfficeView{% endblock title %} 
+
+{% block style %}
+<style>
+  p{
+    font-size: small;
+  }
+</style>
+{% endblock style %}
+
+ {% block content %} 
+ {% include 'Navbar.html' %}
+<div class="container row px-5 mt-4" style="margin-left: 8%; padding-top: 50px">
+
+  {% for i in staff %}
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    <div class="card my-2" style="width:15rem;">
+    <img
+        src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg"
+        height="100px"
+        width="85px;"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}}</h5>
+        <p>{{i.desigination}}</p>
+        <p class="card-text">{{i.subject}}</p>
+        <p class="card-text">{{i.email}}</p>
+      </div>
+      <div class="ms-2 mb-2">
+        <a href="http://127.0.0.1:8000/staffedit/{{i.id}}" class="btn btn-warning" style="border-radius:20px; width:60px;"><i class="fa-sharp fa-regular fa-pen-to-square"></i></a>
+        <a href="http://127.0.0.1:8000/staffdel/{{i.id}}" class="btn btn-info" style="border-radius:20px; width:60px;"><i class="fa-solid fa-trash"></i></a>
+      </div>  
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %} 

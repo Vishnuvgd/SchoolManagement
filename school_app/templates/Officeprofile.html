@@ -1,0 +1,81 @@
+{% extends "base_files/base.html" %}
+{% load static %}
+{% block meta %}{%endblock meta %}
+{% block title %}Officeprofile{% endblock title %}
+{% block style %}
+<style>
+    .btn{
+        margin-left:21%;
+        width:150px;
+       }
+
+    .container-fluid{
+       height:100px;
+       }
+
+    body{
+            background-image: url("https://media.istockphoto.com/id/1495037853/photo/happy-hispanic-teacher-assisting-schoolgirl-during-a-class-at-elementary-school.jpg?s=612x612&w=0&k=20&c=R2nwmghn-bS0TUV_XkcrGdLO4gScxthYL2HmLHsvqH8=");
+            background-repeat:no-repeat;
+            background-size:100% 800px;
+       }
+</style>
+{% endblock style %} 
+
+{% block content %} 
+
+{% include "OfficeNav.html" %}
+
+<div class="row" style="margin-top:5%;margin-left:10%;">
+  <div class="col-4">
+    <div class="card" style="width: 18rem">
+        <div class="card-body">
+            <p style="padding-left:42%;"><i class="fa-solid fa-eye fa-2x"></i></p>
+            <a href="http://127.0.0.1:8000/studentsview/" class="btn btn-warning">View Students</a>
+        </div>
+    </div>   
+  </div>
+
+  <div class="col-4">
+    <div class="card" style="width: 18rem">
+        <div class="card-body">
+            <p style="padding-left:42%;"><i class="fa-solid fa-eye fa-2x"></i></p>
+            <a href="http://127.0.0.1:8000/officelist/" class="btn btn-warning">Staff view</a>
+        </div>
+    </div>   
+  </div>
+  <div class="col-4">
+    <div class="card" style="width: 18rem">
+        <div class="card-body">
+            <p style="padding-left:42%;"><i class="fa-solid fa-eye fa-2x"></i></p>
+            <a href="#" class="btn btn-warning">Office staff</a>
+        </div>
+    </div>   
+  </div>
+  <div class="col-4 mt-2">
+    <div class="card" style="width: 18rem">
+        <div class="card-body">
+            <p style="padding-left:42%;"><i class="fa-solid fa-eye fa-2x"></i></p>
+            <a href="http://127.0.0.1:8000/feelist/" class="btn btn-warning">Fee status</a>
+        </div>
+    </div>   
+  </div>
+  <div class="col-4 mt-2">
+    <div class="card" style="width: 18rem">
+        <div class="card-body">
+            <p style="padding-left:42%;"><i class="fa-solid fa-eye fa-2x"></i></p>
+            <a href="http://127.0.0.1:8000/librarylist/" class="btn btn-warning">Libraray</a>
+        </div>
+    </div>   
+  </div>
+  {% comment %} <div class="col-4 mt-2">
+    <div class="card" style="width: 18rem">
+        <div class="card-body">
+            <p style="padding-left:42%;"><i class="fa-solid fa-eye fa-2x"></i></p>
+            <a href="http://127.0.0.1:8000/feeview/" class="btn btn-warning">Fee history</a>
+        </div>
+    </div>    {% endcomment %}
+  </div>
+
+</div>  
+  {% endblock content %}
+</div>
